@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/stylesheets/homepage.css">
+</head>
+<body>
+    <div class="navbar">
+   <div class="logo"></div>
+   <div id="searchbar">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input  id="myInput" placeholder="Search Product" onkeyup="searchFunc()" />
+  </div>
+   <div class="account">
+    <i class="fa-solid fa-user"></i>
+    <a href="/account">Account</a>
+   </div>
+   <div class="cart">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <a href="/cart">Cart</a>
+   </div>
+    </div>
+
+    <div class="body-part">
+        <div class="content">
+            <p>Discover Your Best Furniture.&#x263A </p>
+        </div>
+    </div>
+    <div class="heading"><p>Categories</p></div>
+    <div class="categories">
+        <div class="products">
+            <div class="photo  title prod" style="background-image:url('/images/chair1.jpg');" ><a href="/chair">Chair</a></div>
+            <div class="photo  title prod" style="background-image:url('/images/table1.jpg'); background-size:contain;" ><a href="/table">Table</a></div>
+            <div class="photo  title prod" style="background-image:url('/images/cabinet2.jpg');" ><a href="/cabinet">Cabinet</a></div>
+            <div class="photo  title prod" style="background-image:url('/images/bench3.jpg');  background-size:contain;" ><a href="/bench">Bench</a></div>
+        </div>
+    </div>
+
+    <div class="educational">
+        <div class="pic"></div>
+            <p>
+                Every year, over 8 million tons of plastic waste end up in our oceans, choking marine life and contaminating our food chain.
+                Air pollution is responsible for over 7 million premature deaths worldwide each year, with vulnerable populations such as children and the elderly suffering the most
+            </p>
+    </div>
+    <footer>
+        <div class="footer-section">
+            <div class="green-color-part">
+              <div class="foot-panel">
+                <div class="footer-panel1">
+                  <ul>
+                    <p>Company</p>
+                    <br>
+                    <a>About us</a>
+                    <br>
+                    <a>Blog</a>
+                    <br>
+                    <a>contact us</a>
+                   </ul>
+                </div>
+                
+                <div class="footer-panel2">
+                  <ul>
+                    <p>Support</p>
+                    <br>
+                    <a>Help Center</a>
+                    <br>
+                    <a>Safety Center</a>
+                    <br>
+                    <a>Community Guidelines</a>
+                   </ul>
+                </div>
+                <div class="footer-panel3">
+                  <ul>
+                    <p>Logout</p>
+                    <br>
+                    <a>Cookies Policy</a>
+                    <br>
+                    <a>Privacy Policy</a>
+                    <br>
+                    <a>Terms of Services</a>
+                    <br>
+                    <a>Law Environment</a>
+                   </ul>
+                </div>
+                
+               
+            </div>
+          </div>
+    </footer>
+    <script>
+
+const searchFunc = () => {
+  
+    let filter = document.getElementById('myInput').value.toUpperCase();
+    let elements = document.querySelectorAll('.prod');
+ 
+    for (var i = 0; i < elements.length; i++) {
+        let a = elements[i].querySelector("a");
+        let value = a.innerHTML.toUpperCase();
+       
+        if(value.indexOf(filter) > -1) {
+            elements[i].style.display = "";
+        } else {
+            elements[i].style.display = "none";
+        }
+}
+
+}
+    </script>
+</body>
+</html>

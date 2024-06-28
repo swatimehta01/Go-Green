@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/pay.css">
+</head>
+<body>
+   
+        <div class="container">
+            <div class="title-box">
+                <h1>Your shopping cart</h1>
+                <p>ID: 548856</p>
+            </div>
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="/images/chair1.jpg" alt="vacuum">
+                </div>
+                <div class="info-box">
+                    <h5>Classic Chair!</h5>
+                    <p class="stock">In stock</p>
+                    <div class="amount-box">
+                        <div class="minus-box">
+                            <i class="fa-solid fa-minus"></i>
+                        </div>
+                        <input type="number" readonly value="1" min="0" max="10" class="amount" id="amount">
+                        <div class="plus-box">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="cost-box">
+                <div>
+                    
+                </div>
+                <div>
+                    <p>Total Amount</p>
+                    <p class="VAT">800,-</p>
+                </div>
+                <div>
+                    <p>After Discount</p>
+                    <p class="NOK">700,-</p>
+                </div>
+                <p class="gift">Got a gift card or a promotional code?</p>
+                <span class="applied">Promo Applied</span>
+            </div>
+            <button class="Checkout-btn">Pay</button>
+        </div>
+        <div class="promo-box">
+            <h5>Enter your promo code</h5>
+            <input type="text" maxlength="6"  id="promo">
+            <button class="send-promo">Send</button>
+        </div>
+        <script src="/javascripts/pay.js"></script>
+    </body>
+
+</html>

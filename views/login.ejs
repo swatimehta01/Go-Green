@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+        <h2>Login to see More</h2>
+        <% if(error.length>0){%>
+            <p class="error"><%= error %></p>
+          <% } %>
+        <form action="/login" method="post">
+          <div class="label-float">
+            <input name="username" type='text' id='username' placeholder=''>
+            <label for='user'>Username</label>
+        </div>
+
+        <div class="label-float">
+            <input name="password" type='password' id='password' placeholder=''>
+            <label for='password'>Password</label>
+        </div>
+
+        <input type="submit" class="btn int" value="Login">
+        
+        </form>
+
+        <div>
+            
+        </div>
+
+        <p>Not on GoGreen Yet? <a href='/'>Sign in</a></p>
+    </div>
+</div>
+
+      
+</body>
+</html>

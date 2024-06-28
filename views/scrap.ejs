@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/scrap.css">
+  </head>
+  <body>
+    <div class="containerpers">
+        <div class="cardpers">
+          <div class="profile-picture">
+            <img src="https://plus.unsplash.com/premium_photo-1680883415362-238794b19dde?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGJlYXV0aWZ1bCUyMHNjZW5lcnl8ZW58MHx8MHx8fDA%3D" alt="Profile Picture">
+          </div>
+          <h2 class="name"> <%=user.fullname%></h2>
+          <h3 class="username">@<%=user.username%></h3>
+          <p class="tagline">Be Green to Keep It Clean.</p>
+          <p class="description">Scrap Seller.</p>
+          <a href="/logout" class="button">Logout</a>
+<div class="space"></div>
+          <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="text" name="filecaption" placeholder="some caption">
+           <input type="file" name="file">
+           <button type="submit">Upload</button>
+          </form>
+
+        </div>
+    </div>
+    <div class="container">
+      <div class="cards flex">
+        <% user.posts.forEach(function(post){%>
+          <div class="card" style="width: 18rem;">
+            <img src="/images/uploads/<%= post.image%>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><%= post.imageText%></h5>
+            </div>
+          </div>
+       <% })%>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
